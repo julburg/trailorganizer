@@ -1,7 +1,8 @@
-package ddd.learning.trailorganizer.infrastructure;
+package ddd.learning.trailorganizer.api;
 
 import ddd.learning.trailorganizer.application.TrailReader;
 import ddd.learning.trailorganizer.domain.Trail;
+import ddd.learning.trailorganizer.infrastructure.IConsoleWriter;
 
 import static java.util.stream.Collectors.joining;
 
