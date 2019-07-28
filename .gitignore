@@ -1,0 +1,22 @@
+# General ignores (tmp files and such)
+*~
+*.tmp
+*.swp
+
+# Build products
+target/
+logs/
+
+# IDEs
+.metadata/
+.project
+.tmp/
+*.iml
+.idea/
+.settings/
+.classpath
+.factorypath
+
+# Spring configuration files (only toplevel)
+/application*.properties
+/application*.yml
