@@ -1,5 +1,6 @@
 package ddd.learning.trailorganizer.application;
 
+import ddd.learning.trailorganizer.domain.IObtainTrails;
 import ddd.learning.trailorganizer.domain.Trail;
 
 import java.util.List;
