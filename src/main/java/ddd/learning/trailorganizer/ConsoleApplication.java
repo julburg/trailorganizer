@@ -11,12 +11,12 @@ import static java.util.Collections.singletonList;
 /**
  * @author  Julia Burgard - burgard@synyx.de
  */
-public class Application {
+public class ConsoleApplication {
 
     public static void main(String[] args) {
 
         TrailReader trailReader = new TrailReader(new HardcodedTrailLibrary(
-                    singletonList(new Trail("Trail des Vosges"))));
+                    singletonList(new Trail("Trail des Vosges", 5))));
         ConsoleAdapter consoleAdapter = new ConsoleAdapter(trailReader);
 
         consoleAdapter.showAllTrails();
