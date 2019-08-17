@@ -1,7 +1,8 @@
 package ddd.learning.trailorganizer.application;
 
-import ddd.learning.trailorganizer.infrastructure.HardcodedTrailLibrary;
+import ddd.learning.trailorganizer.domain.IObtainTrails;
 import ddd.learning.trailorganizer.domain.Trail;
+import ddd.learning.trailorganizer.infrastructure.HardcodedTrailLibrary;
 
 import org.junit.Test;
 
@@ -22,7 +23,7 @@ public class TrailReaderTest {
     @Test
     public void shouldGiveTrails_whenAskedForAllTrails() {
 
-        IObtainTrails obtainTrails = new HardcodedTrailLibrary(singletonList(new Trail("Hometrail")));
+        IObtainTrails obtainTrails = new HardcodedTrailLibrary(singletonList(new Trail("Hometrail", 5)));
         TrailReader trailReader = new TrailReader(obtainTrails);
 
         List<Trail> trails = trailReader.allTrails();

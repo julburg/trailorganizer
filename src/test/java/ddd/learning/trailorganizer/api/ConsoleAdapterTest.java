@@ -1,7 +1,7 @@
 package ddd.learning.trailorganizer.api;
 
-import ddd.learning.trailorganizer.application.IObtainTrails;
 import ddd.learning.trailorganizer.application.TrailReader;
+import ddd.learning.trailorganizer.domain.IObtainTrails;
 import ddd.learning.trailorganizer.domain.Trail;
 import ddd.learning.trailorganizer.infrastructure.HardcodedTrailLibrary;
 import ddd.learning.trailorganizer.infrastructure.IConsoleWriter;
@@ -24,8 +24,8 @@ public class ConsoleAdapterTest {
     @Test
     public void shouldGiveTrails_WhenAskedForAllTrails() {
 
-        IObtainTrails obtainTrails = new HardcodedTrailLibrary(asList(new Trail("Trail des Vosges"),
-                    new Trail("Gelita Trail")));
+        IObtainTrails obtainTrails = new HardcodedTrailLibrary(asList(new Trail("Trail des Vosges", 5),
+                    new Trail("Gelita Trail", 5)));
         TrailReader trailReader = new TrailReader(obtainTrails);
 
         IConsoleWriter writer = mock(IConsoleWriter.class);
