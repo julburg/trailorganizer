@@ -11,6 +11,16 @@ export default {
             list.appendChild(listElement);
         });
 
+        list.addEventListener('click', function (ev) {
+            console.log(ev);
+            var div = document.createElement("div");
+            var txt = document.createTextNode('huhu');
+            div.appendChild(txt)
+
+            ev.target.appendChild(div);
+
+        }, false);
+
         root.appendChild(list);
     },
 
